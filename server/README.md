@@ -4,8 +4,12 @@
 
 This project implements a simple restaurant–pizza ordering system with:
 
-* **Backend**: A Flask RESTful API with three models (`Restaurant`, `Pizza`, `RestaurantPizza`) and full CRUD support for restaurants and restaurant\_pizzas, plus read-only for pizzas.
-* **Frontend**: A React app that consumes the API to list restaurants and pizzas, create new menu items, and delete restaurants.
+* **Backend**
+
+A Flask RESTful API with three models (`Restaurant`, `Pizza`, `RestaurantPizza`) and full CRUD support for restaurants and restaurant\_pizzas, plus read-only for pizzas.
+* **Frontend**
+
+ A React app that consumes the API to list restaurants and pizzas, create new menu items, and delete restaurants.
 
 ---
 
@@ -14,7 +18,7 @@ This project implements a simple restaurant–pizza ordering system with:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/phase-4-pizza-challenge.git
+   git clone https://github.com/PreeNJ/phase-4-pizza-challenge.git
    cd phase-4-pizza-challenge/server
    ```
 2. **Create and activate a virtual environment**
@@ -50,7 +54,7 @@ This project implements a simple restaurant–pizza ordering system with:
 
 ---
 
-## Database Models (3 pts)
+## Database Models
 
 ### 1. Restaurant
 
@@ -75,7 +79,7 @@ Restaurant <─┐            ┌─> Pizza
 
 ---
 
-## Validations (3 pts)
+## Validations
 
 * **Restaurant**: `name` and `address` must be present
 * **Pizza**: `name` and `ingredients` must be present
@@ -83,7 +87,7 @@ Restaurant <─┐            ┌─> Pizza
 
 ---
 
-## API Routes (4 pts)
+## API Routes 
 
 ### GET /restaurants
 
@@ -135,8 +139,7 @@ Restaurant <─┐            ┌─> Pizza
   ]
   ```
 
-### DELETE /restaurants/\:id (2 pts)
-
+### DELETE /restaurants/\:id 
 * **Description**: Deletes a restaurant and cascades to its `RestaurantPizza` records
 * **Success (204)**: No body
 * **Not Found (404)**:
@@ -145,7 +148,7 @@ Restaurant <─┐            ┌─> Pizza
   { "error": "Restaurant not found" }
   ```
 
-### POST /restaurant\_pizzas (2 pts)
+### POST /restaurant\_pizzas  
 
 * **Description**: Creates a new menu item linking a restaurant and a pizza
 * **Request Body**:
@@ -166,8 +169,7 @@ Restaurant <─┐            ┌─> Pizza
 
 ---
 
-## Frontend (view) (4 pts)
-
+## Frontend (view)  
 All operations are hooked up in the React app:
 
 * **Listing**: On load, `App.js` fetches `/restaurants` and `/pizzas`, passing data into `RestaurantList` and `PizzaList` components.
@@ -178,4 +180,4 @@ All operations are hooked up in the React app:
 
 ## License
 
-MIT © Priscillah Njai
+© Priscillah Njai
